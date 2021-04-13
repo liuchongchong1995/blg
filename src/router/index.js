@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import Container from '@/containers'; 
-
+import assemblyRouter from './modules/assembly';
 /**
  * 无权限页面
  */
@@ -76,7 +76,8 @@ export const asyncRoutes = [
         path: '*',
         redirect: '/404',
         hidden: true
-    }
+    },
+    assemblyRouter
 ];
 
 const createRouter = () => new VueRouter({
